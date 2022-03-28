@@ -10,24 +10,22 @@
 int main()
 {
 	Polynomial f, g;
-
+	f.CreateTerm(2.3, 2);
 	f.CreateTerm(-4, 3);
-	// f.CreateTerm(2.3, 2);
-	// f.CreateTerm(-3, 0);
-
+	f.CreateTerm(-3, 0);
 	std::cout << "f = ";
 	f.Print();
 
-	// g.CreateTerm(3, 4);
-	// g.CreateTerm(-8, 0);
-	// g.CreateTerm(-4, 3);
+	g.CreateTerm(3, 4);
+	g.CreateTerm(-8, 0);
+	g.CreateTerm(-4, 3);
 
-	// std::cout << "g = ";
-	// g.Print();
+	std::cout << "g = ";
+	g.Print();
 
-	// g.CreateTerm(5, 2);
-	// std::cout << "g (creating a new term) = ";
-	// g.Print();
+	g.CreateTerm(5, 2);
+	std::cout << "g (creating a new term) = ";
+	g.Print();
 
 	// // copy constructor test
 	// std::cout << "h (created from f) = ";

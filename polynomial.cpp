@@ -81,9 +81,78 @@ Polynomial Polynomial::Derivative()
 */
 void Polynomial::CreateTerm(const float coef, const int exp)
 {
-	Term temp;
-	temp.coef = coef;
-	temp.exp = exp;
-	termArray[Terms()] = temp;
-	terms++;
+	if (Capacity() > Terms())
+	{
+		bool flag = true;
+		Term temp;
+		temp.coef = coef;
+		temp.exp = exp;
+		for (int i = 0; i < Terms(); i++)
+		{
+			if (termArray[i].exp == exp)
+			{
+				termArray[i].coef += coef;
+				flag = false;
+				break;
+			}
+			else if (termArray[i].exp < exp)
+			{
+				for (int j = Terms(); j > i; j--)
+				{
+					termArray[j] = termArray[j - 1];
+				}
+				termArray[i] = temp;
+				terms++;
+				flag = false;
+				break;
+			}
+		}
+		if (flag)
+		{
+			termArray[Terms()] = temp;
+			terms++;
+		}
+	}
+	else
+	{
+		// start of extend
+		capacity += 5;
+		Term *newArray = new Term[capacity];
+		Term *buffer = termArray;
+		termArray = newArray;
+		for (int i = 0; i < Terms(); i++)
+			termArray[i] = buffer[i];
+		delete[] buffer;
+		// end of extend
+		// adding a new term
+		bool flag = true;
+		Term temp;
+		temp.coef = coef;
+		temp.exp = exp;
+		for (int i = 0; i < Terms(); i++)
+		{
+			if (termArray[i].exp == exp)
+			{
+				termArray[i].coef += coef;
+				flag = false;
+				break;
+			}
+			else if (termArray[i].exp < exp)
+			{
+				for (int j = Terms(); j > i; j--)
+				{
+					termArray[j] = termArray[j - 1];
+				}
+				termArray[i] = temp;
+				terms++;
+				flag = false;
+				break;
+			}
+		}
+		if (flag)
+		{
+			termArray[Terms()] = temp;
+			terms++;
+		}
+	}
 }
