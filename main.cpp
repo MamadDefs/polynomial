@@ -67,5 +67,8 @@ int main()
 	std::cout << "Derivative of f = ";
 	i.Print();
 
+	// std::cout << "f * g = ";
+	// (f * g).Print();
+
 	return 0;
 }

@@ -55,9 +55,9 @@ Polynomial Polynomial::operator-(const Polynomial &source)
 Polynomial Polynomial::operator*(const Polynomial &source)
 {
 	Polynomial c;
-
-	// ToDo
-
+	for (int i = 0; i < this->Terms(); i++)
+		for (int j = 0; j < source.Terms(); j++)
+			c.CreateTerm(this->termArray[i].coef * source.termArray[j].coef, this->termArray[i].exp + source.termArray[j].exp);
 	return c;
 }
 
