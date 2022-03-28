@@ -63,11 +63,14 @@ Polynomial Polynomial::operator*(const Polynomial &source)
 
 bool Polynomial::operator==(const Polynomial &source)
 {
-	bool ret;
-
-	// ToDo
-
-	return ret;
+	if (this->Terms() == source.Terms())
+	{
+		for (int i = 0; i < this->Terms(); i++)
+			if (this->termArray[i].coef != source.termArray[i].coef || this->termArray[i].exp != source.termArray[i].exp)
+				return false;
+		return true;
+	}
+	return false;
 }
 
 float Polynomial::Eval(float x)

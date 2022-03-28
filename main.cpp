@@ -47,8 +47,14 @@ int main()
 	h = f - g;
 	h.Print();
 
-	// // Equal test
-	// if(f == g)
+	// Equal test
+	if (f == g)
+		std::cout << "f and g are same" << std::endl;
+	else
+		std::cout << "f and g are different" << std::endl;
+
+	// f = g;
+	// if (f == g)
 	// 	std::cout << "f and g are same" << std::endl;
 	// else
 	// 	std::cout << "f and g are different" << std::endl;
