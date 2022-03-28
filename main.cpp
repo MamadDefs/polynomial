@@ -53,8 +53,8 @@ int main()
 	// else
 	// 	std::cout << "f and g are different" << std::endl;
 
-	// // Eval test
-	// std::cout << "f(3.5) is " << f.Eval(3.5) << std::endl;
+	// Eval test
+	std::cout << "f(3.5) is " << f.Eval(3.5) << std::endl;
 
 	// // Derivative test
 	// Polynomial i = f.Derivative();

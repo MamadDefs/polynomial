@@ -49,16 +49,16 @@ public:
 	Polynomial operator-(const Polynomial &source);
 
 	// Product of *this and source polynomials
-	// Polynomial operator*(const Polynomial &source);
+	Polynomial operator*(const Polynomial &source);
 
 	// Compute derivative of the current polynomial
-	// Polynomial Derivative();
+	Polynomial Derivative();
 
 	// Return true if left polynomial is identical to right polynomial
-	// bool operator==(const Polynomial &source);
+	bool operator==(const Polynomial &source);
 
 	// Evaluate polynomial *this at x and return the result
-	// float Eval(float x);
+	float Eval(float x);
 
 	// Create a new term. If the term exists, overwrite its coefficient.
 	void CreateTerm(const float coef, const int exp);

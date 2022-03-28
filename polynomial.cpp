@@ -51,7 +51,7 @@ Polynomial Polynomial::operator-(const Polynomial &source)
 		c.CreateTerm(-source.termArray[i].coef, source.termArray[i].exp);
 	return c;
 }
-/*
+
 Polynomial Polynomial::operator*(const Polynomial &source)
 {
 	Polynomial c;
@@ -72,10 +72,18 @@ bool Polynomial::operator==(const Polynomial &source)
 
 float Polynomial::Eval(float x)
 {
-	float ret = 0;
-
-	// ToDo
-
+	float ret = 0, result;
+	for (int i = 0; i < this->terms; i++)
+	{
+		result = 1;
+		// multiply of coef into result
+		result *= this->termArray[i].coef;
+		// calculating the result of power
+		for (int j = 0; j < this->termArray[i].exp; j++)
+			result *= x;
+		// adding result into ret
+		ret += result;
+	}
 	return ret;
 }
 
@@ -88,7 +96,7 @@ Polynomial Polynomial::Derivative()
 
 	return c;
 }
-*/
+// creating new term for our polynomial
 void Polynomial::CreateTerm(const float coef, const int exp)
 {
 	if (Capacity() > Terms())
