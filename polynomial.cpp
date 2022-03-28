@@ -94,9 +94,8 @@ float Polynomial::Eval(float x)
 Polynomial Polynomial::Derivative()
 {
 	Polynomial c;
-
-	// ToDo
-
+	for (int i = 0; i < this->Terms(); i++)
+		c.CreateTerm(this->termArray[i].coef * this->termArray[i].exp, this->termArray[i].exp - 1);
 	return c;
 }
 // creating new term for our polynomial

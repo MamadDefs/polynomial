@@ -62,10 +62,10 @@ int main()
 	// Eval test
 	std::cout << "f(3.5) is " << f.Eval(3.5) << std::endl;
 
-	// // Derivative test
-	// Polynomial i = f.Derivative();
-	// std::cout << "Derivative of f = ";
-	// i.Print();
+	// Derivative test
+	Polynomial i = f.Derivative();
+	std::cout << "Derivative of f = ";
+	i.Print();
 
 	return 0;
 }
