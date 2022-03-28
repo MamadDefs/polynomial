@@ -32,26 +32,26 @@ Polynomial &Polynomial::operator=(const Polynomial &source)
 		this->termArray[i] = source.termArray[i];
 	return *this;
 }
-/*
+
 // Sum of *this and source polynomials
 Polynomial Polynomial::operator+(const Polynomial &source)
 {
 	Polynomial c;
-
-	// ToDo
-
+	c = *this;
+	for (int i = 0; i < source.Terms(); i++)
+		c.CreateTerm(source.termArray[i].coef, source.termArray[i].exp);
 	return c;
 }
 
 Polynomial Polynomial::operator-(const Polynomial &source)
 {
 	Polynomial c;
-
-	// ToDo
-
+	c = *this;
+	for (int i = 0; i < source.Terms(); i++)
+		c.CreateTerm(-source.termArray[i].coef, source.termArray[i].exp);
 	return c;
 }
-
+/*
 Polynomial Polynomial::operator*(const Polynomial &source)
 {
 	Polynomial c;

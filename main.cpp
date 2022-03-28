@@ -37,15 +37,15 @@ int main()
 	h = g;
 	h.Print();
 
-	// // Add test
-	// std::cout << "f + g = ";
-	// h = f + g;
-	// h.Print();
+	// Add test
+	std::cout << "f + g = ";
+	h = f + g;
+	h.Print();
 
-	// // Subtract test
-	// std::cout << "f - g = ";
-	// h = f - g;
-	// h.Print();
+	// Subtract test
+	std::cout << "f - g = ";
+	h = f - g;
+	h.Print();
 
 	// // Equal test
 	// if(f == g)

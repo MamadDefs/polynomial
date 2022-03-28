@@ -43,10 +43,10 @@ public:
 	Polynomial &operator=(const Polynomial &source);
 
 	// Sum of *this and source polynomials
-	// Polynomial operator+(const Polynomial &source);
+	Polynomial operator+(const Polynomial &source);
 
 	// Subtract of source polynomials from *this
-	// Polynomial operator-(const Polynomial &source);
+	Polynomial operator-(const Polynomial &source);
 
 	// Product of *this and source polynomials
 	// Polynomial operator*(const Polynomial &source);
@@ -79,10 +79,12 @@ public:
 				{
 					std::cout << "+";
 				}
-
-				std::cout << c;
-				if (e > 0)
-					std::cout << "x^" << e;
+				if (c != 0)
+				{
+					std::cout << c;
+					if (e > 0)
+						std::cout << "x^" << e;
+				}
 			}
 			std::cout << std::endl;
 		}
