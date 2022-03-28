@@ -2,17 +2,15 @@
 #include <iostream>
 #include <math.h>
 
-
 //
 // Implementation
 //
-
-
+/*
 // Copy constructor
-Polynomial::Polynomial(const Polynomial& source)
+Polynomial::Polynomial(const Polynomial &source)
 {
 	// ToDo
-}	
+}
 
 // Destructor
 Polynomial::~Polynomial()
@@ -20,58 +18,54 @@ Polynomial::~Polynomial()
 	// ToDo
 }
 
-
-Polynomial& Polynomial::operator = (const Polynomial& source)
+Polynomial &Polynomial::operator=(const Polynomial &source)
 {
 	// ToDo
 }
-
-
 
 // Sum of *this and source polynomials
-Polynomial Polynomial::operator +(const Polynomial& source)
+Polynomial Polynomial::operator+(const Polynomial &source)
 {
 	Polynomial c;
-	
+
 	// ToDo
-	
+
 	return c;
 }
 
-Polynomial Polynomial::operator - (const Polynomial& source)
+Polynomial Polynomial::operator-(const Polynomial &source)
 {
 	Polynomial c;
 
 	// ToDo
-	
+
 	return c;
-	
 }
 
-Polynomial Polynomial::operator * (const Polynomial& source)
+Polynomial Polynomial::operator*(const Polynomial &source)
 {
 	Polynomial c;
-	
+
 	// ToDo
-	
-	return c;	
+
+	return c;
 }
 
-bool Polynomial::operator == (const Polynomial& source)
+bool Polynomial::operator==(const Polynomial &source)
 {
 	bool ret;
-	
+
 	// ToDo
-	
+
 	return ret;
 }
 
 float Polynomial::Eval(float x)
 {
 	float ret = 0;
-	
+
 	// ToDo
-	
+
 	return ret;
 }
 
@@ -79,17 +73,17 @@ float Polynomial::Eval(float x)
 Polynomial Polynomial::Derivative()
 {
 	Polynomial c;
-	
+
 	// ToDo
-	
-	
-	return c;	
 
+	return c;
 }
-
+*/
 void Polynomial::CreateTerm(const float coef, const int exp)
 {
-	// ToDo
-	
+	Term temp;
+	temp.coef = coef;
+	temp.exp = exp;
+	termArray[Terms()] = temp;
+	terms++;
 }
-
