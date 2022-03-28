@@ -34,13 +34,13 @@ public:
 	};
 
 	// Copy constructor
-	// Polynomial(const Polynomial &source);
+	Polynomial(const Polynomial &source);
 
 	// Destructor
-	//~Polynomial();
+	~Polynomial();
 
 	// Assignment operator
-	// Polynomial &operator=(const Polynomial &source);
+	Polynomial &operator=(const Polynomial &source);
 
 	// Sum of *this and source polynomials
 	// Polynomial operator+(const Polynomial &source);

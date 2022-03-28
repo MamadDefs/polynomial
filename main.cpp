@@ -27,15 +27,15 @@ int main()
 	std::cout << "g (creating a new term) = ";
 	g.Print();
 
-	// // copy constructor test
-	// std::cout << "h (created from f) = ";
-	// Polynomial h = f;
-	// h.Print();
+	// copy constructor test
+	std::cout << "h (created from f) = ";
+	Polynomial h = f;
+	h.Print();
 
-	// // assignment operator test
-	// std::cout << "h (assigned from g) = ";
-	// h = g;
-	// h.Print();
+	// assignment operator test
+	std::cout << "h (assigned from g) = ";
+	h = g;
+	h.Print();
 
 	// // Add test
 	// std::cout << "f + g = ";

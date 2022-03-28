@@ -5,24 +5,34 @@
 //
 // Implementation
 //
-/*
+
 // Copy constructor
 Polynomial::Polynomial(const Polynomial &source)
 {
-	// ToDo
+	this->capacity = source.capacity;
+	this->terms = source.terms;
+	this->termArray = new Term[this->capacity];
+	for (int i = 0; i < this->terms; i++)
+		this->termArray[i] = source.termArray[i];
 }
 
 // Destructor
 Polynomial::~Polynomial()
 {
-	// ToDo
+	delete[] termArray;
 }
 
 Polynomial &Polynomial::operator=(const Polynomial &source)
 {
-	// ToDo
+	delete[] this->termArray;
+	this->capacity = source.capacity;
+	this->terms = source.terms;
+	this->termArray = new Term[this->capacity];
+	for (int i = 0; i < this->terms; i++)
+		this->termArray[i] = source.termArray[i];
+	return *this;
 }
-
+/*
 // Sum of *this and source polynomials
 Polynomial Polynomial::operator+(const Polynomial &source)
 {
