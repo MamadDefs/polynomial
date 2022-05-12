@@ -1,8 +1,3 @@
-//
-// Spring 2022 COSE213 Assignment 1
-//
-// Won-Ki Jeong (wkjeong@korea.ac.kr)
-//
 
 #include "polynomial.h"
 #include <iostream>
